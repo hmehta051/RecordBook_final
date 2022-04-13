@@ -6,12 +6,15 @@ import './Common.css'
 import axios from 'axios'
 import Newentry from "./Newentry";
 import MapData from "./MiniComponent/MapData";
-const API_URL="https://my-mockapp.herokuapp.com/students"||"http://localhost:3001/students"
+const LOCAL_URL="http://localhost:3001/students"
+const HEROKU_URL="https://my-mockapp.herokuapp.com/students"
+const API_URL=HEROKU_URL ||LOCAL_URL
 
 function Home() {
     const [data,setData]=useState([])
     const [show,setShow]=useState(false)
     const [see,setSee]=useState(false)
+    const [sorting,setSorting]=useState(null)
     const handleSee=()=>{
         setSee(!see)
     }
@@ -22,6 +25,18 @@ function Home() {
         axios.get(API_URL)
         .then(({data})=>setData(data))
     }
+    if(sorting==="ASC"){
+        const sorti=(a,b)=>{
+            if(a.student_name<b.student_name){
+                return -1
+            }else if(a.student_name>b.student_name){
+                return 1
+            }
+            return 0
+        }
+        console.log(data.sort(sorti));
+        setSorting({...data.sort(sorti)})
+    }
     useEffect(() => {
         getData()
     }, [])
@@ -31,11 +46,11 @@ function Home() {
         <table className='tableMain'>
             <thead className='tableHead'>
                 <tr id='headDes'>
-                    <th><MdFormatAlignLeft className="cd"/>Student Name<MdKeyboardArrowDown className="arrowd" /></th>
-                    <th><span className="hash">#</span>Rank<MdKeyboardArrowDown className="arrowd"/></th>
-                    <th><MdOutlineArrowDropDownCircle className="cd"/>College Preference 1<MdKeyboardArrowDown  className="arrowd"/></th>
-                    <th><MdOutlineArrowDropDownCircle className="cd"/>College Preference 2<MdKeyboardArrowDown className="arrowd"/></th>
-                    <th><MdOutlineArrowDropDownCircle className="cd"/>College Preference 3<MdKeyboardArrowDown className="arrowd"/></th>
+                    <th><MdFormatAlignLeft className="cd"/>Student Name<MdKeyboardArrowDown className="arrowd" onClick={()=>setSorting("ASC")} /></th>
+                    <th><span className="hash">#</span>Rank<MdKeyboardArrowDown className="arrowd" onClick={()=>setSorting("ASC")}/></th>
+                    <th><MdOutlineArrowDropDownCircle className="cd"/>College Preference 1<MdKeyboardArrowDown  className="arrowd" onClick={()=>setSorting("ASC")}/></th>
+                    <th><MdOutlineArrowDropDownCircle className="cd"/>College Preference 2<MdKeyboardArrowDown className="arrowd" onClick={()=>setSorting("ASC")}/></th>
+                    <th><MdOutlineArrowDropDownCircle className="cd"/>College Preference 3<MdKeyboardArrowDown className="arrowd" onClick={()=>setSorting("ASC")}/></th>
                 </tr>
             </thead>
             <tbody className='tableBody'>

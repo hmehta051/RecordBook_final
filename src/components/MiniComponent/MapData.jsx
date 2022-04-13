@@ -2,7 +2,9 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import NormalTr from './NormalTr'
 import EditTr from './EditTr'
-const API_URL="https://my-mockapp.herokuapp.com/students"||"http://localhost:3001/students"
+const LOCAL_URL="http://localhost:3001/students"
+const HEROKU_URL="https://my-mockapp.herokuapp.com/students"
+const API_URL=HEROKU_URL ||LOCAL_URL
 function MapData({data, setData}) {
     const [seen,setSeen]= useState(-1)
     const handleEdit=(id)=>{

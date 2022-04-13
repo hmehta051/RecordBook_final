@@ -142,13 +142,16 @@
 .ll{
   /* border: 1px solid red; */
   display: inline-block;
-  width: 40%;
+  width: 45%;
   height: 20px;
   background-color: #e6effb;
 }
 input{
-  width: 60%;
+  width: 55%;
   float: right;
+}
+.dc{
+  text-align: center;
 }
 
 .btn12{
