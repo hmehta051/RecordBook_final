@@ -1,0 +1,94 @@
+{
+  "students": [
+    {
+      "id": 1649760093108,
+      "student_name": "Rohan",
+      "rank": "9",
+      "college_preference1": "IIT BOMBAY",
+      "college_preference2": "IIM AHMEDABAD",
+      "college_preference3": "IIT MADRAS"
+    },
+    {
+      "id": 1649760127906,
+      "student_name": "rohit dsds",
+      "rank": "2",
+      "college_preference1": "IIM AHMEDABAD",
+      "college_preference2": "IIT KANPUR",
+      "college_preference3": "IIT MADRAS"
+    },
+    {
+      "id": 1649763299307,
+      "student_name": "h",
+      "rank": "2",
+      "college_preference1": "IIT BOMBAY",
+      "college_preference2": "IIIT HYDERABAD",
+      "college_preference3": "IIT KANPUR"
+    },
+    {
+      "id": 1649765175611,
+      "student_name": "a",
+      "rank": "1",
+      "college_preference1": "IIT MADRAS",
+      "college_preference2": "IIT BOMBAY",
+      "college_preference3": "IIT ROORKEE"
+    },
+    {
+      "id": 1649766978437,
+      "student_name": "an",
+      "rank": "2",
+      "college_preference1": "IIIT HYDERABAD",
+      "college_preference2": "IIT BOMBAY",
+      "college_preference3": "IIT ROORKEE"
+    },
+    {
+      "id": 1649769615142,
+      "student_name": "a",
+      "rank": "1",
+      "college_preference1": "IIT MADRAS",
+      "college_preference2": "IIT KANPUR",
+      "college_preference3": "IIIT HYDERABAD"
+    },
+    {
+      "id": 1649770202152,
+      "student_name": "sartha",
+      "rank": "1",
+      "college_preference1": "IIT KANPUR",
+      "college_preference2": "IIT MADRAS",
+      "college_preference3": "IIT BOMBAY"
+    },
+    {
+      "id": 1649782368884,
+      "student_name": "AAAA",
+      "rank": "11",
+      "college_preference1": "IIIT HYDERABAD",
+      "college_preference2": "IIT MADRAS",
+      "college_preference3": "IIM AHMEDABAD"
+    }
+  ],
+  "colleges": [
+    {
+      "name": "IIT Madras",
+      "noOfSeats": 4
+    },
+    {
+      "name": "IIT Kanpur",
+      "noOfSeats": 2
+    },
+    {
+      "name": "IIT Bombay",
+      "noOfSeats": 1
+    },
+    {
+      "name": "IIT Hyderabad",
+      "noOfSeats": 3
+    },
+    {
+      "name": "IIT Roorkee",
+      "noOfSeats": 1
+    },
+    {
+      "name": "IIM Ahemedabad",
+      "noOfSeats": 2
+    }
+  ]
+}
